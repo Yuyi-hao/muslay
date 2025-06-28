@@ -1,13 +1,20 @@
-import { Button } from "@/components/ui/button"
-import './App.css'
-
+import './App.css';
+import {Route, Routes} from "react-router-dom";
+import HomePage from './pages/home/HomePage';
+import AuthCallbackPage from './pages/auth-callback/AuthCallbackPage';
+import MainLayout from './layout/MainLayout';
 
 function App() {
   return (
     <>
-      <p className='text-3xl font-bold underline'>Muslay</p>
+    <Routes>
+      <Route path='/auth-callback' element={<AuthCallbackPage/>}></Route>
+      <Route element={<MainLayout/>}>
+        <Route path='/' element={<HomePage/>}></Route>
+      </Route>
+    </Routes>
     </>
   )
 }
 
-export default App
+export default App;
