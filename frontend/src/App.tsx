@@ -4,6 +4,7 @@ import HomePage from './pages/home/HomePage';
 import AuthCallbackPage from './pages/auth-callback/AuthCallbackPage';
 import MainLayout from './layout/MainLayout';
 import ChatPage from './pages/chat/ChatPage';
+import AlbumPage from './pages/album/AlbumPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <Route element={<MainLayout/>}>
         <Route path='/' element={<HomePage/>}></Route>
         <Route path='/chats' element={<ChatPage/>}></Route>
+        <Route path='/album' element={<AlbumPage/>}></Route>
       </Route>
     </Routes>
     </>
